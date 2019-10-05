@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default sync-j="4" revision="warrior"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/mtudan" name="mtudan"/>
+
+  <project remote="yocto" name="poky" revision="warrior" path="sources/poky"/>
+  <project remote="mtudan" name="meta-omega2p" revision="warrior" path="sources/meta-omega2p"/>
+</manifest>

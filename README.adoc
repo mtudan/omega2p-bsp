@@ -1,0 +1,31 @@
+= Omega2+ BSP
+
+To get the BSP you need to have `repo` installed and use it as:
+
+Install the `repo` utility:
+
+[source,console]
+$: mkdir ~/bin
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+$: chmod a+x ~/bin/repo
+$: PATH=${PATH}:~/bin
+
+Download the BSP source:
+
+[source,console]
+$: mkdir omega2p-yocto && cd omega2p-yocto
+$: repo init -u https://github.com/mtudan/omega2p-bsp.git -b thud
+$: repo sync
+
+At the end of the commands you have every metadata you need to start work with.
+
+To start a simple image build (reference only instructions, use appropriate `<TARGET>` name):
+
+[source,console]
+$: source sources/poky/oe-init-build-env
+$: ../sources/meta-omega2p/scripts/setup-environment.sh <TARGET>
+$: bitbake core-image-minimal
+
+You can use any directory to host your build.
+
+The source code is checked out at `omega2p-yocto/sources`.
