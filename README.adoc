@@ -14,7 +14,7 @@ Download the BSP source:
 
 [source,console]
 $: mkdir omega2p-yocto && cd omega2p-yocto
-$: repo init -u https://github.com/mtudan/omega2p-bsp.git -b thud
+$: repo init -u https://github.com/mtudan/omega2p-bsp.git -b warrior
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
